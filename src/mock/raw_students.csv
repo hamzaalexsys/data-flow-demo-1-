@@ -1,0 +1,11 @@
+id;Nom;Prénom;NoteMath;NotePhysique;Ville;DateNaissance
+1;Dupont;Jean;14,5;12,0;Paris;15/03/2006
+2;Martin;Sophie;16,0;15,5;Lyon;22/07/2006
+3;Dubois;Pierre;10,5;11,0;Marseille;05/01/2006
+4;Lefèvre;Emma;18,0;17,5;Paris;30/09/2006
+5;Moreau;Lucas;9,5;10,0;Lyon;12/11/2006
+6;Bernard;Chloé;13,0;14,0;Marseille;18/05/2006
+7;Thomas;Hugo;11,5;12,5;Paris;02/08/2006
+8;Petit;Léa;15,0;14,0;Lyon;25/04/2006
+9;Robert;Nathan;8,5;9,0;Marseille;10/12/2006
+10;Richard;Camille;17,0;16,0;Paris;07/06/2006
