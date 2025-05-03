@@ -16,7 +16,7 @@ export default function App() {
 
   useEffect(() => {
     document.body.className = theme === "dark" ? "dark" : ""
-    document.body.style.background = "linear-gradient(180deg, #616E76 0%, #A12A2F 112.94%)"
+    document.body.style.background = "white"
   }, [theme])
 
   return (

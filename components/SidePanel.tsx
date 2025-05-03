@@ -98,28 +98,32 @@ const SidePanel = () => {
 
   return (
     <div className="p-4 h-full overflow-auto border-l border-[#A12A2F] dark:border-[#A12A2F]">
-      <h2 className="text-xl font-bold mb-4">{getNodeTitle()}</h2>
+      <h2 className="text-xl font-bold mb-4 text-[#A12A2F]">{getNodeTitle()}</h2>
 
       <div className="mb-4">
-        <h3 className="text-lg font-semibold mb-2">Description</h3>
-        <p className="text-gray-200 dark:text-gray-200">{getNodeDescription()}</p>
+        <h3 className="text-lg font-semibold mb-2 text-[#A12A2F]">Description</h3>
+        <p className="text-black dark:text-black">{getNodeDescription()}</p>
       </div>
 
       {data && (
         <>
           <div className="mb-4">
-            <h3 className="text-lg font-semibold mb-2">Schéma</h3>
+            <h3 className="text-lg font-semibold mb-2 text-[#A12A2F]">Schéma</h3>
             <pre className="bg-[#5A6770] dark:bg-[#5A6770] p-3 rounded-md overflow-x-auto text-sm">
               {JSON.stringify(data.schema, null, 2)}
             </pre>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-2">Aperçu des données</h3>
+            <h3 className="text-lg font-semibold mb-2 text-[#A12A2F]">Aperçu des données</h3>
             {data.data && data.data.length > 0 ? (
               <DataTable data={data.data} />
             ) : (
-              <p className="text-gray-300 dark:text-gray-300">Aucune donnée disponible</p>
+              <p className="text-black dark:text-black">
+                {activeNode === "source" && !activeSource 
+                  ? "Veuillez sélectionner une source spécifique (Habous, MEN, ESUP ou OFPPT) pour visualiser les données."
+                  : "Aucune donnée disponible"}
+              </p>
             )}
           </div>
         </>
