@@ -30,30 +30,30 @@ const PowerBIPanel = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-3/4 border-l border-[#A12A2F] dark:border-[#A12A2F]">
+      <div className="flex justify-center items-center h-full border-l border-[#A12A2F] dark:border-[#A12A2F]">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#A12A2F]"></div>
       </div>
     )
   }
 
   return (
-    <div className="h-3/4 border-l border-[#A12A2F] dark:border-[#A12A2F] overflow-y-auto">
+    <div className="h-full border-l border-[#A12A2F] dark:border-[#A12A2F]">
       <div className="p-4">
-        <h2 className="text-xl font-bold mb-4">Visualisation des données</h2>
+        <h2 className="text-xl font-bold mb-4 text-[#A12A2F]">Visualisation des données</h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 h-[calc(100%-5rem)]">
         {dashboards.map((dashboard) => (
           <div 
             key={dashboard.id} 
-            className="bg-white dark:bg-[#2D3748] p-6 rounded-md shadow-lg text-center border border-gray-200 dark:border-gray-700"
+            className="bg-white dark:bg-[#2D3748] p-4 rounded-md shadow-lg text-center border border-gray-200 dark:border-gray-700 flex flex-col justify-between"
           >
-            <h3 className="text-lg font-bold mb-4">{dashboard.name}</h3>
+            <h3 className="text-lg font-bold mb-2 truncate" title={dashboard.name}>{dashboard.name}</h3>
             <a 
               href={dashboard.url} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-[#A12A2F] hover:bg-[#7a1f23] text-white font-semibold rounded-md transition-colors duration-300"
+              className="inline-block px-4 py-2 bg-[#A12A2F] hover:bg-[#7a1f23] text-white font-semibold rounded-md transition-colors duration-300 mt-auto"
             >
               Ouvrir le tableau de bord
             </a>
